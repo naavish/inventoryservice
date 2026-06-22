@@ -2,6 +2,8 @@ package com.example.bookingsystem.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @Getter
 @Setter
@@ -24,6 +26,9 @@ public class EventEntity {
 
     @Column(name = "leftcapacity")
     private Long leftCapacity;
+
+    @Column(name = "ticketprice")
+    private BigDecimal ticketPrice;
 
     @ManyToOne
     @JoinColumn(name = "venueid")
